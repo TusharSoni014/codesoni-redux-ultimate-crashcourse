@@ -36,15 +36,15 @@ export const cartData: EcomItem[] = [
     ],
   },
   {
-    id: 3,
-    title: "Classic Heather Gray Hoodie",
-    price: 90,
+    id: 2,
+    title: "Classic Red Pullover Hoodie",
+    price: 19,
     description:
-      "Stay cozy and stylish with our Classic Heather Gray Hoodie. Crafted from soft, durable fabric, it features a kangaroo pocket, adjustable drawstring hood, and ribbed cuffs. Perfect for a casual day out or a relaxing evening in, this hoodie is a versatile addition to any wardrobe.",
+      "Elevate your casual wardrobe with our Classic Red Pullover Hoodie. Crafted with a soft cotton blend for ultimate comfort, this vibrant red hoodie features a kangaroo pocket, adjustable drawstring hood, and ribbed cuffs for a snug fit. The timeless design ensures easy pairing with jeans or joggers for a relaxed yet stylish look, making it a versatile addition to your everyday attire.",
     images: [
-      "https://i.imgur.com/cHddUCu.jpeg",
-      "https://i.imgur.com/CFOjAgK.jpeg",
-      "https://i.imgur.com/wbIMMme.jpeg",
+      "https://i.imgur.com/1twoaDy.jpeg",
+      "https://i.imgur.com/FDwQgLy.jpeg",
+      "https://i.imgur.com/kg1ZhhH.jpeg",
     ],
   },
   {
@@ -60,6 +60,18 @@ export const cartData: EcomItem[] = [
     ],
   },
   {
+    id: 2,
+    title: "Classic Red Pullover Hoodie",
+    price: 19,
+    description:
+      "Elevate your casual wardrobe with our Classic Red Pullover Hoodie. Crafted with a soft cotton blend for ultimate comfort, this vibrant red hoodie features a kangaroo pocket, adjustable drawstring hood, and ribbed cuffs for a snug fit. The timeless design ensures easy pairing with jeans or joggers for a relaxed yet stylish look, making it a versatile addition to your everyday attire.",
+    images: [
+      "https://i.imgur.com/1twoaDy.jpeg",
+      "https://i.imgur.com/FDwQgLy.jpeg",
+      "https://i.imgur.com/kg1ZhhH.jpeg",
+    ],
+  },
+  {
     id: 3,
     title: "Classic Heather Gray Hoodie",
     price: 90,
@@ -71,4 +83,5 @@ export const cartData: EcomItem[] = [
       "https://i.imgur.com/wbIMMme.jpeg",
     ],
   },
+  
 ];

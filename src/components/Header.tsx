@@ -11,8 +11,10 @@ import {
 import { Link } from "react-router-dom";
 import { cartData } from "@/utils/demo";
 import CartItem from "./CartItem";
+import { useState } from "react";
 
 export default function Header() {
+  const [sheetOpen, setSheetOpen] = useState<boolean>(false);
   return (
     <div className="z-20 h-16 w-full p-3 justify-between items-center flex border-b sticky top-0 bg-slate-950">
       <Link to="/">
@@ -22,7 +24,7 @@ export default function Header() {
         <Link to="/shop">
           <Button variant="secondary">Shop</Button>
         </Link>
-        <Sheet>
+        <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
           <SheetTrigger asChild>
             <Button
               size="icon"
@@ -36,7 +38,7 @@ export default function Header() {
               )}
             </Button>
           </SheetTrigger>
-          <SheetContent>
+          <SheetContent className="flex justify-between items-center flex-col">
             <SheetHeader>
               <SheetTitle>My Shopping Cart</SheetTitle>
               <SheetDescription>
@@ -51,6 +53,16 @@ export default function Header() {
                 )}
               </SheetDescription>
             </SheetHeader>
+            <div className="__cart_footer w-full flex justify-between items-center bg-slate-950">
+              <p className="text-lg font-bold">
+                Total: <span className="text-green-500">${123}</span>
+              </p>
+              <Link to="/checkout">
+                <Button onClick={() => setSheetOpen(false)} variant="default">
+                  Checkout
+                </Button>
+              </Link>
+            </div>
           </SheetContent>
         </Sheet>
       </div>
