@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Home() {
   return (
     <div className="w-full h-[calc(100dvh-64px)] flex justify-center items-center flex-col gap-2">
