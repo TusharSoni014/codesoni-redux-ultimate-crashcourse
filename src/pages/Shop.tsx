@@ -8,7 +8,7 @@ export default function Shop() {
   const fetchStoreItems = async () => {
     setShopLoading(true);
     try {
-      const response = await fetch("https://api.escuelajs.co/api/v1/products");
+      const response = await fetch("https://fakestoreapi.com/products");
       const responseJson = await response.json();
       setStoreItems(responseJson);
     } catch (error) {

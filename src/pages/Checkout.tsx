@@ -29,7 +29,7 @@ export default function Checkout() {
             <span className="underline">contact@ecom.com</span>
           </p>
         </form>
-        <div className="flex justify-between flex-col gap-2">
+        <div className="flex justify-between flex-col gap-2 flex-1">
           <div className="__checkout_info flex-1 border p-2 rounded h-[calc(100%-100px)] overflow-auto">
             {cartData.map((item) => {
               return <CartItem data={item} />;
