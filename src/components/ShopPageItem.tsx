@@ -1,6 +1,13 @@
+import { useDispatch, useSelector } from "react-redux";
 import { Button } from "./ui/button";
+import { addToCart, removeFromCart } from "@/redux/slices/cartSlice";
+import { RootState } from "@/redux/store";
 
 export default function ShopPageItem({ data }: { data: EcomItem }) {
+  const dispatch = useDispatch();
+  const cartItems = useSelector(
+    (state: RootState) => state.cartSlice.cartItems
+  );
   return (
     <div className="rounded flex flex-col bg-gray-800 p-3 gap-3 justify-between relative">
       <div className="flex flex-col gap-3 ">
@@ -17,7 +24,26 @@ export default function ShopPageItem({ data }: { data: EcomItem }) {
         <p className="font-semibold">{data.title}</p>
         <small className="text-gray-500 text-xs">{data.description}</small>
       </div>
-      <Button className="w-full">Add to Cart +</Button>
+      {cartItems.filter((item) => item.id === data.id).length === 0 ? (
+        <Button
+          onClick={() => {
+            dispatch(addToCart(data));
+          }}
+          className="w-full"
+        >
+          Add to Cart +
+        </Button>
+      ) : (
+        <Button
+          onClick={() => {
+            dispatch(removeFromCart(data.id));
+          }}
+          variant="destructive"
+          className="w-full"
+        >
+          Remove from Cart -
+        </Button>
+      )}
     </div>
   );
 }

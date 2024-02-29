@@ -9,11 +9,14 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
-import { cartData } from "@/utils/demo";
 import CartItem from "./CartItem";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
 
 export default function Header() {
+  const cartData = useSelector((state: RootState) => state.cartSlice.cartItems);
+
   const [sheetOpen, setSheetOpen] = useState<boolean>(false);
   return (
     <div className="z-20 h-16 w-full p-3 justify-between items-center flex border-b sticky top-0 bg-slate-950">
@@ -46,7 +49,7 @@ export default function Header() {
                   "Your cart is empty"
                 ) : (
                   <div className="max-h-[450px] overflow-auto flex flex-col gap-3">
-                    {cartData.map((item) => {
+                    {[...cartData].reverse().map((item) => {
                       return <CartItem data={item} />;
                     })}
                   </div>
@@ -55,7 +58,13 @@ export default function Header() {
             </SheetHeader>
             <div className="__cart_footer w-full flex justify-between items-center bg-slate-950">
               <p className="text-lg font-bold">
-                Total: <span className="text-green-500">${123}</span>
+                Total:{" "}
+                <span className="text-green-500">
+                  $
+                  {cartData
+                    .reduce((total, item) => total + item.price, 0)
+                    .toFixed(2)}
+                </span>
               </p>
               <Link to="/checkout">
                 <Button onClick={() => setSheetOpen(false)} variant="default">

@@ -11,7 +11,7 @@ const Checkout = lazy(() => import("./pages/Checkout"));
 function App() {
   return (
     <>
-      <Toaster position="bottom-right" />
+      <Toaster position="bottom-left" />
       <Header />
       <Suspense
         fallback={
