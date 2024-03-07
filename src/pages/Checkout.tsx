@@ -28,7 +28,7 @@ export default function Checkout() {
     toast("Order Placed!");
     navigate("/shop");
   };
-  const cartData = useSelector((state: RootState) => state.cartSlice.cartItems);
+  const cartData = useSelector((state: RootState) => state.persistedReducer.cartSlice.cartItems);
   return (
     <div className="w-full h-[calc(100dvh-64px)] flex justify-center items-center p-3">
       <div className="__checkout_container h-[80%] border rounded p-3 w-full max-w-[900px] bg-slate-900 flex gap-3">

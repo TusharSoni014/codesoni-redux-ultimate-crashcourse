@@ -6,7 +6,7 @@ import { RootState } from "@/redux/store";
 export default function ShopPageItem({ data }: { data: EcomItem }) {
   const dispatch = useDispatch();
   const cartItems = useSelector(
-    (state: RootState) => state.cartSlice.cartItems
+    (state: RootState) => state.persistedReducer.cartSlice.cartItems
   );
   return (
     <div className="rounded flex flex-col bg-gray-800 p-3 gap-3 justify-between relative">

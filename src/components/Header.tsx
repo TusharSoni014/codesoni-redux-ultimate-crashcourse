@@ -15,7 +15,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 
 export default function Header() {
-  const cartData = useSelector((state: RootState) => state.cartSlice.cartItems);
+  const cartData = useSelector((state: RootState) => state.persistedReducer.cartSlice.cartItems);
 
   const [sheetOpen, setSheetOpen] = useState<boolean>(false);
   return (
