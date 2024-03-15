@@ -35,7 +35,7 @@ export default function Checkout() {
         <form className="flex gap-3 flex-col flex-1">
           <h1 className="font-bold text-xl mb-2">Checkout Info</h1>
           <Input
-            className="bg-slate-950 focus-visible:ring-0"
+            className="bg-slate-900 focus-visible:ring-0"
             placeholder="Full Name"
           />
           <Input
