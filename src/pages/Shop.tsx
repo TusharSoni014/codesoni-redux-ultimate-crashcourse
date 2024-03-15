@@ -26,7 +26,7 @@ export default function Shop() {
       })}
     </div>
   ) : (
-    <div className="w-full h-[calc(100vh-64px)] flex justify-center items-center">
+    <div className="w-[100%]h-[calc(100vh-64px)] flex justify-center items-center">
       Loading Shop Items...
     </div>
   );

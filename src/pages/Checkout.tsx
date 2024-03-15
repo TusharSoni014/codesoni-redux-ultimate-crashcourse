@@ -30,8 +30,8 @@ export default function Checkout() {
   };
   const cartData = useSelector((state: RootState) => state.persistedReducer.cartSlice.cartItems);
   return (
-    <div className="w-full h-[calc(100dvh-64px)] flex justify-center items-center p-3">
-      <div className="__checkout_container h-[80%] border rounded p-3 w-full max-w-[900px] bg-slate-900 flex gap-3">
+    <div className="w-[100%]h-[calc(100dvh-64px)] flex justify-center items-center p-3">
+      <div className="__checkout_container h-[80%] border rounded p-3 w-[100%]max-w-[900px] bg-slate-900 flex gap-3">
         <form className="flex gap-3 flex-col flex-1">
           <h1 className="font-bold text-xl mb-2">Checkout Info</h1>
           <Input

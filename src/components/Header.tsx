@@ -19,7 +19,7 @@ export default function Header() {
 
   const [sheetOpen, setSheetOpen] = useState<boolean>(false);
   return (
-    <div className="z-20 h-16 w-full p-3 justify-between items-center flex border-b sticky top-0 bg-slate-950">
+    <div className="z-20 h-16 w-[100%]p-3 justify-between items-center flex border-b sticky top-0 bg-slate-950">
       <Link to="/">
         <h1 className="font-bold">Redux CrashCourse</h1>
       </Link>
@@ -56,7 +56,7 @@ export default function Header() {
                 )}
               </SheetDescription>
             </SheetHeader>
-            <div className="__cart_footer w-full flex justify-between items-center bg-slate-950">
+            <div className="__cart_footer w-[100%]flex justify-between items-center bg-slate-950">
               <p className="text-lg font-bold">
                 Total:{" "}
                 <span className="text-green-500">
